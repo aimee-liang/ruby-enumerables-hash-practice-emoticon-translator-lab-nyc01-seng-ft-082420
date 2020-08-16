@@ -31,7 +31,7 @@ def get_english_meaning(path, emoticon)
   
   emoticons_hash.each do |emoticon_name, result|
     result.each do |key, value|
-      if emoticon == result[:japanese]
+      if value == 
         return key
       end
     end
