@@ -34,7 +34,7 @@ def get_english_meaning(path, emoticon)
     result.each do |key, value|
       binding.pry
       if emoticon == value
-        return key
+        return emoticon_name
       end
     end
   end
