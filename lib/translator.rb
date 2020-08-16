@@ -13,16 +13,16 @@ def load_library(path)
 end
 
 def get_japanese_emoticon(path, emoticon)
-  emoticons_library = load_library(path)
+  emoticons_hash = load_library(path)
 
-  emoticons_library.select.do |key, value|
-    if emoticon == value[:english]
-      return value[:japanese]
+  emoticons_hash.each do |emoticon_name, result|
+    result.each do |key, value|
+      if emoticon == value
+        return result[:japanese]
+      end
     end
   end
-  unless emoticons_library.include? (emoticon)
-    return "Sorry, that emoticon was not found"
-  end
+p "Sorry, that emoticon was not found"
 end
   
 
