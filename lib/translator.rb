@@ -32,7 +32,9 @@ def get_english_meaning(path, emoticon)
   
   emoticons_hash.each do |emoticon_name, result|
     result.each do |key, value|
+      binding.pry
       if emoticon == value
+        binding.pry
         return result[key]
       end
     end
